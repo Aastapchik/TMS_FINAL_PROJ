@@ -1,4 +1,4 @@
-package PROFIPROJ.securingweb;
+package myProj.securingweb;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

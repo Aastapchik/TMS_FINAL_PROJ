@@ -1,7 +1,11 @@
-package PROFIPROJ.entity;
+package myProj.entity;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
-
+@Getter
+@Setter
 @Entity
 @Table(name = "sphere_of_activity")
 public class SphereActivity {

@@ -17,14 +17,13 @@
         <property name="current_session_context_class">thread</property>
         <property name="format_sql">true</property>
 
-        <mapping class="PROFIPROJ.entity.User"/>
-        <mapping class="PROFIPROJ.entity.User."/>
-        <mapping class="PROFIPROJ.entity.AvailableOrder"/>
-        <mapping class="PROFIPROJ.entity.SphereActivity"/>
-        <mapping class="PROFIPROJ.entity.UserAOrder"/>
-        <mapping class="PROFIPROJ.entity.UserCard"/>
-        <mapping class="PROFIPROJ.entity.UserOrder"/>
-        <mapping class="PROFIPROJ.entity.UserReview"/>
+        <mapping class="myProj.entity.User"/>
+        <mapping class="myProj.entity.AvailableOrder"/>
+        <mapping class="myProj.entity.SphereActivity"/>
+        <mapping class="myProj.entity.UserAOrder"/>
+        <mapping class="myProj.entity.UserCard"/>
+        <mapping class="myProj.entity.UserOrder"/>
+        <mapping class="myProj.entity.UserReview"/>
 
     </session-factory>
 </hibernate-configuration>

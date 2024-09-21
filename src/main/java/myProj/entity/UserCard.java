@@ -1,7 +1,11 @@
-package PROFIPROJ.entity;
+package myProj.entity;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
-
+@Getter
+@Setter
 @Entity
 @Table(name = "usrs_card")
 public class UserCard {
@@ -27,7 +31,7 @@ public class UserCard {
                 "id=" + id +
                 ", numStar=" + numStar +
                 ", description='" + description + '\'' +
-                ", user=" + user +
+             //   ", user=" + user +
                 '}';
     }
 }

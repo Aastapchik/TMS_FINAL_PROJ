@@ -1,4 +1,4 @@
-package PROFIPROJ.controller;
+package myProj.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

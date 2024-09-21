@@ -1,6 +1,6 @@
-package PROFIPROJ.dataBase;
+package myProj.dataBase;
 
-import PROFIPROJ.entity.*;
+import myProj.entity.*;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

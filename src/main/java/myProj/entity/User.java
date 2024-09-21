@@ -1,11 +1,14 @@
-package PROFIPROJ.entity;
+package myProj.entity;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Getter
+@Setter
 @Entity
 @Table(name = "usrs")
 public class User {
@@ -46,13 +49,16 @@ public class User {
     @OneToOne (optional=false, mappedBy="user")
     private UserCard userCard;
 
-    @OneToMany (mappedBy="user", fetch=FetchType.EAGER)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @OneToMany (mappedBy="user", fetch=FetchType.LAZY)
     private List<UserAOrder> userAOrders;
 
-    @OneToMany (mappedBy="user", fetch=FetchType.EAGER)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @OneToMany (mappedBy="user", fetch=FetchType.LAZY)
     private List<UserOrder> userOrders;
 
-    @OneToMany (mappedBy="user", fetch=FetchType.EAGER)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @OneToMany (mappedBy="user", fetch=FetchType.LAZY)
     private List<UserReview> userReviews;
 
     @Override
@@ -63,7 +69,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", role='" + role + '\'' +
                 ", sphereActivityList=" + sphereActivityList.size() +
-                ", availableOrdersList=" + availableOrdersList.size() +
+             //   ", availableOrdersList=" + availableOrdersList.size() +
                 ", userCard=" + userCard +
                 ", userAOrders=" + userAOrders.size() +
                 ", userOrders=" + userOrders.size() +
