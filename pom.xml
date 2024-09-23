@@ -1,66 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
-  <artifactId>Magazin</artifactId>
+  <artifactId>untitled5</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>Magazin Maven Webapp</name>
-  <url>https://maven.apache.org</url>
-  <repositories>
-    <repository>
-      <id>jitpack.io</id>
-      <url>https://jitpack.io</url>
-    </repository>
-  </repositories>
+  <name>untitled5 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>3.2.5</version>
+    <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <dependencies>
-    <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish.jaxb</groupId>
-      <artifactId>jaxb-runtime</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-entitymanager</artifactId>
-      <version>5.4.10.Final</version>
-    </dependency>
-
-    <dependency>
-      <groupId>net.n2oapp.criteria</groupId>
-      <artifactId>criteria-api</artifactId>
-      <version>7.27.15</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.tomcat.embed</groupId>
-      <artifactId>tomcat-embed-jasper</artifactId>
-      <version>10.1.20</version>
-    </dependency>
+    <!--    <dependency>-->
+    <!--      <groupId>org.springframework.boot</groupId>-->
+    <!--      <artifactId>spring-boot-starter-security</artifactId>-->
+    <!--    </dependency>-->
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-tomcat</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.servlet.jsp.jstl</groupId>
-      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-      <version>3.0.0</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.glassfish.web</groupId>
-      <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-      <version>2.0.0</version>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
     <dependency>
@@ -68,89 +29,52 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
-
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-validation</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-jar-plugin</artifactId>
-      <version>3.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.xml.bind</groupId>
-      <artifactId>jaxb-core</artifactId>
-      <version>2.3.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.xml.bind</groupId>
-      <artifactId>jaxb-api</artifactId>
-      <version>2.3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.xml.bind</groupId>
-      <artifactId>jaxb-impl</artifactId>
-      <version>2.3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.javassist</groupId>
-      <artifactId>javassist</artifactId>
-      <version>3.25.0-GA</version>
-    </dependency>
-
-<!--    <dependency>-->
-<!--      <groupId>myLibForWord</groupId>-->
-<!--      <artifactId>megalib</artifactId>-->
-<!--      <version>${project.version}</version>-->
-<!--      <scope>system</scope>-->
-<!--      <systemPath>${basedir}/lib/aspose-words-20.12-jdk17.jar</systemPath>-->
-<!--    </dependency>-->
-    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.34</version>
+      <optional>true</optional>
+    </dependency>
+    <!--      <dependency>-->
+    <!--          <groupId>org.apache.tomcat.embed</groupId>-->
+    <!--          <artifactId>tomcat-embed-jasper</artifactId>-->
+    <!--          <version>10.1.20</version>-->
+    <!--      </dependency>-->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <scope>10.1.20</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!--    <dependency>-->
+    <!--      <groupId>org.springframework.boot</groupId>-->
+    <!--      <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
+    <!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.springframework.security</groupId>-->
+    <!--      <artifactId>spring-security-test</artifactId>-->
+    <!--      <scope>test</scope>-->
+    <!--    </dependency>-->
+    <dependency>
+      <groupId>org.glassfish.web</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+      <version>2.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
       <scope>provided</scope>
     </dependency>
-
-    <dependency>
-      <groupId>com.github.demidko</groupId>
-      <artifactId>aot</artifactId>
-      <version>2022.05.20</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.petrovich4j</groupId>
-      <artifactId>petrovich4j</artifactId>
-      <version>1.1.3</version>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.xml.bind</groupId>
-      <artifactId>jaxb-api</artifactId>
-      <version>2.3.0</version>
-    </dependency>
   </dependencies>
-
-  <properties>
-    <java.version>17</java.version>
-    <start-class>
-      myApp.RunnerApp
-    </start-class>
-  </properties>
-
   <build>
-    <finalName>forJlehahh</finalName>
-    <plugins>
-
-    </plugins>
+    <finalName>untitled5</finalName>
   </build>
-
 </project>
