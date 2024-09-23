@@ -13,4 +13,16 @@ public class StartController {
         return "startPagePROFI";
     }
 
+    @GetMapping(name = "/registration")
+    private String registration(){
+        //todo ЛОГИКА РЕГИСТРАЦИИ И СОХРАНЕНИЯ В БД
+        return "registrationForm";
+    }
+
+    @GetMapping(name = "/logout")
+    private String logout(){
+        //todo ЛОГИКА ЛОГАУТА
+        return "startPagePROFI";
+    }
+
 }
