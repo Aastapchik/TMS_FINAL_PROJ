@@ -48,43 +48,34 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="http://localhost:8080" class="nav-link px-2 text-red"
+                    <li><a href="${pageContext.request.contextPath}/profi-welcome-" class="nav-link px-2 text-red"
                            style="color: red; font-weight: bold">MYPROJPROFI</a></li>
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                            Minsk
+                            <ul class="dropdown-menu">
+                                <c:forEach items="${cities}" var="city">
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/profi-welcome-${city}">${city}</a></li>
+                                </c:forEach>
+                                </option>
+                            </ul>
                         </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Vitebsk</a></li>
-                            <li><a class="dropdown-item" href="#">Mogilev</a></li>
-                            <li><a class="dropdown-item" href="#">Brest</a></li>
-                        </ul>
+
                     </div>
 
 
-                    <li><a href="#" class="nav-link px-2 text-white">Мои заказы</a></li>
-                    <li><p>_______________________________________________________________________________________</p>
+                    <li><a href="${pageContext.request.contextPath}/profi-user-myorders" class="nav-link px-2 text-white">Мои заказы</a></li>
+                    <li><p>___________________________________________________________</p>
                     </li>
-                    <li><a href="#" class="nav-link px-2 text-white">Вход для специалистов</a></li>
+                    <li><a href="${pageContext.request.contextPath}/profi-master-login" class="nav-link px-2 text-white">Вход для специалистов</a></li>
                 </ul>
 
                 <div class="text-end">
-                    <%--                    <c:if test="${authMaster}">--%>
-                    <%--                        <button class="btn btn-outline-light me-2" onclick="location.href='/login'" type="button">--%>
-                    <%--                            Login--%>
-                    <%--                        </button>--%>
-                    <%--                    </c:if>--%>
-                    <%--                    <c:if test="${authUser}">--%>
-                    <%--                        <button class="btn btn-outline-light me-2" onclick="location.href='/login'" type="button">--%>
-                    <%--                            Login--%>
-                    <%--                        </button>--%>
-                    <%--                    </c:if>--%>
-                    <button class="btn btn-outline-light me-2" onclick="location.href='/login'" type="button">
-                        Login
+                    <button class="btn btn-outline-light me-2" onclick="location.href='/profi-welcome-user'" type="button">
+                        Вход для пользователей
                     </button>
-                    <button class="btn btn-warning" onclick="location.href='/signUp'" type="button">
-                        Sign-up
+                    <button class="btn btn-warning" onclick="location.href='/profi-registration'" type="button">
+                        Регистрация
                     </button>
 
                 </div>
@@ -123,7 +114,7 @@
                 <div class="container text-center">
                     <div class="row">
                         <div class="col-3">
-                            <img src="../../myPNG/engl.png"/>
+                            <img src="${pageContext.request.contextPath}/../../myPNG/engl.png"/>
                             <br>
                             <a href="http://localhost:8080"><p style="color: burlywood">Английский язык</p></a>
                         </div>

@@ -1,4 +1,4 @@
-package myProj.config;//package myProj.config;
+//package myProj.config;
 //
 //import org.springframework.context.annotation.Configuration;
 //import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -8,7 +8,7 @@ package myProj.config;//package myProj.config;
 //public class MvcConfig implements WebMvcConfigurer {
 //
 //    public void addViewControllers(ViewControllerRegistry registry) {
-//        registry.addViewController("/profi/start").setViewName("login");
+//        registry.addViewController("/profi-user-login").setViewName("loginForm");
 //    }
 //
 //}

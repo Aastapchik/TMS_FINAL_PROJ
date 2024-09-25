@@ -1,8 +1,9 @@
-<%@ taglib prefix="th" uri="http://jakarta.apache.org/taglibs/standard/permittedTaglibs" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE HTML>
 <html>
-<head>
-    <header>
+
+<header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>StartProfi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -11,9 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
-    </header>
-</head>
+</header>
+
+
 <body>
+
 
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
@@ -56,26 +59,78 @@
                         <li><a class="dropdown-item" href="#">Brest</a></li>
                     </ul>
                 </div>
+
+
+                <li><a href="#" class="nav-link px-2 text-white">Вернуться на главную</a></li>
+                <li><p>_________________________________________</p>
+                </li>
+                <li><a href="#" class="nav-link px-2 text-white">Вход для специалистов</a></li>
+                <li><a class="nav-link px-2 text-white">Приветствуем, ${nameUser}</a></li>
             </ul>
+
+            <div class="text-end">
+
+                <button type="button" class="btn btn-warning">Выйти из аккаунта</button>
+            </div>
         </div>
     </div>
 </header>
 <br>
-<div th:if="${param.error}">
-    Invalid username and password.
-</div>
 <div class="container text-center">
-<form action="${pageContext.request.contextPath}/login" method="post">
-    <div class="mb-3">
-        <label for="username" class="form-label" style="font-size: 25px; font-weight: bold">Введите логин</label>
-        <input type="text" class="form-control" name="username" id="username">
+    <div class="row">
+        <div class="col" style="font-size: 50px; font-weight: bold">Мои заказы</div>
+        <div class="col"></div>
+        <div class="col"></div>
     </div>
-    <div class="mb-3">
-        <label for="password" class="form-label"style="font-size: 25px; font-weight: bold">Введите пароль</label>
-        <input type="password" class="form-control" name="password" id="password">
-    </div>
-    <button type="submit" class="btn btn-primary">Авторизоваться</button>
-</form>
 </div>
+<br>
+<div class="container text-center">
+    <div class="card w-100 mb-3">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 45px">Создать заказ</h5>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-10">
+                        <form>
+                            <p>
+                                <input class="form-control" style="width: 1150px"
+                                       placeholder="Услуга или специалист"
+                                       aria-label="Search">
+                            </p>
+                        </form>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-danger">НАЙТИ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<c:forEach items="${orders}" var="order">
+    <br>
+    <div class="container text-center">
+        <div class="card w-100 mb-3">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 45px">Заказ: ${order.nameOrder}</h5>
+                <div class="container text-right">
+                    <p style="text-align: left; font-size: 25px"> Статус: ${order.status} </p>
+
+                    <c:if test="${order.status}">
+                        <p style="text-align: left; font-size: 25px;"> Исполнитель: ${order.master} </p>
+                    </c:if>
+                    <c:if test="${!order.status}">
+                        <p style="text-align: left; font-size: 25px;"> Ваш заказ пока никто не обработал </p>
+                    </c:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</c:forEach>
+
 </body>
+
+
 </html>

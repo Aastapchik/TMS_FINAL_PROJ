@@ -1,4 +1,4 @@
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <header>
@@ -61,7 +61,7 @@
 </header>
 <br>
 <div class="container text-center">
-    <form action="/registration">
+    <form action="/profi-save-new-account">
         <div class="mb-3">
             <label for="name" class="form-label" style="font-size: 25px; font-weight: bold">Введите Ваше имя</label>
             <input type="text" class="form-control" id="name">

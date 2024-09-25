@@ -20,6 +20,12 @@ public class UserCard {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "surname")
+    private String surname;
+
     @OneToOne(optional=false, cascade=CascadeType.ALL)
     @JoinColumn(name = "fk_card_usrs")
     private User user;

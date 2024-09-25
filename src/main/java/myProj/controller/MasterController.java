@@ -1,17 +1,15 @@
-package myProj.controllers;
+package myProj.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(name = "/profi/master")
+//@RequestMapping(path = "/profi/master")
 public class MasterController {
 
-    @GetMapping(name = "/login")
+    @GetMapping(path = "/profi-master-login")
     private String loginMaster(){
 
-        //todo ЛОГИКА ДЛЯ ВХОДА МАСТЕРА
         return "loginForm";
     }
 
